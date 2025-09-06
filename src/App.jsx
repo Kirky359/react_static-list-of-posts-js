@@ -16,7 +16,7 @@ const findUsers = id => {
 export const preparedPosts = postsFromServer.map(post => ({
   ...post,
   user: findUsers(post.userId),
-  comments: findComments(post.userId),
+  comments: findComments(post.id),
 }));
 
 export const App = () => (
